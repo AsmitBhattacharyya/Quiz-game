@@ -17,7 +17,7 @@ class Question {
     this.title.hide();
     this.input1.hide();
     this.button.hide();
-    //this.button2.hide();
+    this.button2.hide();
     this.input2.hide();
   }
 
@@ -61,4 +61,19 @@ class Question {
       ref.remove()
     })
   }
+  handleElements() {
+    question.hide();
+    question.titleImg.position(40, 50);
+    question.titleImg.class("gameTitleAfterEffect");
+  }
+play() {
+  this.handleElements();
+  question.getQuestionsInfo();
+
+  if(allQuestions !== undefined) {
+    image(track, 0, -height * 5, width, height * 6);
+
+    drawSprites()
+  }
+}
 }

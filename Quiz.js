@@ -49,33 +49,33 @@ class Quiz {
         debugger;
         var correctAns = "2";
 
-        // if (correctAns !== allContestants[plr].answer){
-        //   fill("Green")
-        // }
-        // else{
-        //   fill("red");
-        // }
+        if (correctAns !== allContestants[plr].answer){
+           fill("Green")
+         }
+         else{
+           fill("red");
+         }
 
-        // if (correctAns === allContestants[plr].answer){
-        //   fill("Green")
-        // }
-        // else{
-        //   fill("red");
-        // }
+         if (correctAns === allContestants[plr].answer){
+           fill("Green")
+         }
+         else{
+           fill("red");
+         }
 
-        // if (correctAns === allContestants[plr].answer){
-        //   fill("red")
-        // }
-        // else{
-        //   fill("green");
-        // }
+         if (correctAns === allContestants[plr].answer){
+           fill("red")
+         }
+         else{
+           fill("green");
+         }
 
-        // if (correctAns = allContestants[plr].answer){
-        //   fill("Green")
-        // }
-        // else{
-        //   fill("red");
-        // }
+         if (correctAns = allContestants[plr].answer){
+           fill("Green")
+         }
+         else{
+           fill("red");
+         }
 
         display_Answers+=30;
         textSize(20);
@@ -83,4 +83,19 @@ class Quiz {
       }
     }
   }
+  handleElements() {
+    question.hide();
+    question.titleImg.position(40, 50);
+    question.titleImg.class("gameTitleAfterEffect");
+  }
+play() {
+  this.handleElements();
+  question.getQuestionsInfo();
+
+  if(allQuestions !== undefined) {
+    image(track, 0, -height * 5, width, height * 6);
+
+    drawSprites()
+  }
+}
 }
